@@ -4,7 +4,7 @@ EXPOSE 8080
 
 WORKDIR /app
 
-ADD . /app
+ADD . .
 
 RUN deno cache main.ts
 
