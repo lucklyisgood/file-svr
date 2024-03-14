@@ -28,7 +28,10 @@ app.post('/upload', async (c) => {
 
   await Deno.writeFile(filePath, file_data)
 
-  return c.text("succ")
+  return c.json({
+    status: 0,
+    path: filePath
+  })
 });
 
 Deno.serve(app.fetch)
