@@ -13,7 +13,10 @@ app.use('/static/uploads/*', serveStatic({ root: './' }))
 
 app.post('/upload', async (c) => {
   const body = await c.req.parseBody()
-  const dist_path = body['path']
+  let dist_path = body['path']
+  if(typeof dist_path ==='object') {
+    dist_path = await dist_path.text()
+  }
   const file = body['file']
   const file_data = await file.stream()
 
