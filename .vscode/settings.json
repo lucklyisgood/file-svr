@@ -1,0 +1,10 @@
+{
+  "deno.enablePaths": [
+    "./"
+  ],
+  "deno.enable": true,
+  "editor.inlayHints.enabled": "off",
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Volumes/Elements/vker/vker/pro_ts/file-svr/.github/workflows/deploy.yml"
+  }
+}

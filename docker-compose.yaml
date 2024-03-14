@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    container_name: file-svr
+    image: vkerl/file-svr:v1.0.0
+    ports:
+      - "8102:8000"
+    restart: always
+    volumes:
+      - ./:/app/
